@@ -1,0 +1,51 @@
+export const otherProject = [
+  {
+    id: 1,
+    title: "Manchine Learning Web App",
+    desc: "Sebuah aplikasi web berbasis kecerdasan buatan atau AI. Dengan cabang Machine Learning. Aplikasi untuk pengklasifikasian kualitas minuman wine.",
+    link: "https://github.com/azharluthfi14/django-ai-wine",
+    tech: ["Python", "Django", "Jupyter"],
+  },
+  {
+    id: 2,
+    title: "Djangorest Vue Note App",
+    desc: "Aplikasi simpel yang digunakan untuk membuat sebuah catatan. Dengan konsep CRUD yaitu Create, Read, Update, Delete.",
+    link: "https://github.com/azharluthfi14/djangovue-note",
+    tech: ["Vue", "Django", "Python"],
+  },
+  {
+    id: 3,
+    title: "Cryptocap",
+    desc: "Memanfaatkan API dari Coinranking. Menampilkan sejumlah harga mata uang kripto seperti Bitcoin, Ethereum, dan Binance secara real-time.",
+    link: "#",
+    tech: ["React", "Coinranking API", "Tailwindcss"],
+  },
+  {
+    id: 4,
+    title: "React Django Note App",
+    desc: "Aplikasi catatan dengan konsep Create Read Update Delete. Aplikasi ini dibuat dengan React untuk sisi Frontend dan Django untuk sisi Backend.",
+    link: "#",
+    tech: ["React", "Django", "Tailwindcss"],
+  },
+  {
+    id: 5,
+    title: "Custom user pada Django",
+    desc: "Mengkustomisasi user bawaan default pada django. Dengan memodifikasi beberapa fitur bawaan seperti username, email address dll.",
+    link: "https://github.com/azharluthfi14/django-custom-user",
+    tech: ["Python", "Django"],
+  },
+  {
+    id: 6,
+    title: "Dockerizing Django dengan Postgres, Gunicorn, dan Nginx",
+    desc: "Men-dockerize aplikasi Django dan membuat nya menjadi sebuah image docker beserta PostgreSQL, kemudian di jalankan sebagai container.",
+    link: "https://github.com/azharluthfi14/django-nginx-docker",
+    tech: ["Docker", "Django", "Python"],
+  },
+  {
+    id: 7,
+    title: "NEFA",
+    desc: "Web landingpage cryptocurrency yang buat menggunakan Vite, ReactJs and TailwindCSS",
+    link: "https://github.com/azharluthfi14/Cryptocurrency-LandingPage",
+    tech: ["React Js", "Javascript", "Tailwind"],
+  },
+];
