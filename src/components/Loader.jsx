@@ -1,40 +1,73 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
+import { RiArchiveDrawerFill } from 'react-icons/ri';
 
 export default function Loader({ setLoading }) {
-
-    const container = {
-        show: {
-            transition: {
-                staggerChildren: 0.35,
-            },
-        },
-    };
-
-    const draw = {
-        hidden: { pathLength: 0, opacity: 0 },
+    // points = "121.9,174.2 121.9,315.5 250,382.2 378.1,315.5 378.1,174.2 "
+    // points = "159.4,295.5 159.4,154.2 250,97.8 339.3,154.2 339.3,295.5 "
+    // x1="250" y1="97.8" x2="250" y2="319.8"
+    const containerAnimation = {
         visible: {
-            pathLength: 1,
-            opacity: 1,
             transition: {
                 pathLength: {
                     delay: 0.5,
-                    type: 'spring',
                     duration: 1.5,
-                    bounce: 0
                 },
                 opacity: {
                     delay: 0.5,
-                    duration: 0.01
-                }
+                    duration: 0.001
+                },
             }
-        },
-        exit: {
-            opacity: 0,
+        }
+    };
+
+    const draw = {
+        hidden: { pathLength: 0, opacity: 1 },
+        visible: {
+            pathLength: 1,
+            opacity: 1,
+            fill: ['#ffffff00', '#8b5cf6'],
             transition: {
-                ease: "easeInOut",
-                duration: 0.8,
+                fill: {
+                    delay: 2.3,
+                    duration: 1,
+                    ease: 'linear'
+                },
+                pathLength: {
+                    delay: 0.5,
+                    duration: 1.5,
+                },
+                opacity: {
+                    delay: 0.5,
+                    duration: 0.001
+                },
             },
+        },
+    }
+
+    const line = {
+        hidden: {
+            pathLength: 0,
+            opacity: 0,
+        },
+        visible: {
+            pathLength: 1,
+            opacity: 1,
+            stroke: ['#8b5cf6', '#ffff'],
+            transition: {
+                pathLength: {
+                    delay: 0.5,
+                    duration: 1.5,
+                },
+                stroke: {
+                    delay: 2.2,
+                    ease: 'linear'
+                },
+                opacity: {
+                    delay: 0.5,
+                    duration: 0.001
+                },
+            }
         }
     }
 
@@ -59,27 +92,40 @@ export default function Loader({ setLoading }) {
                 <AnimatePresence type='crossfade'>
                     <motion.svg
                         viewBox="0 0 500 500"
-                        variants={container}
+                        variants={containerAnimation}
                         initial="hidden"
                         animate="visible"
-                        exit="exit"
                         onAnimationComplete={() => setLoading(false)}
                     >
                         <motion.rect
-                            x="53.8"
-                            y="53.8"
-                            width="392.4"
-                            height="392.4"
+                            x="15.2" y="15.2"
+                            width="469.6" height="469.6"
                             rx={30}
-                            fill="none"
                             strokeMiterlimit={10}
                             strokeWidth={20}
                             stroke="#8b5cf6"
                             variants={draw}
                         />
-                        <motion.path stroke="none" fill="#8b5cf6" variants={fade}
-                            d="M279.4,301.4h-59.3l-9.5,28.1h-40.5l57.5-158.8h44.8l57.5,158.8h-41L279.4,301.4z M249.8,213.3l-19.5,58.1h39.1
-                        L249.8,213.3z" />
+                        <motion.polyline
+                            fill='none'
+                            rx={30}
+                            stroke="#8b5cf6"
+                            strokeWidth={20}
+                            strokeLinecap="round"
+                            strokeMiterlimit={10}
+                            variants={line}
+                            points="121.9,185.2 121.9,326.5 250,393.2 378.1,326.5 378.1,185.2" />
+                        <motion.polyline
+                            fill='none'
+                            rx={30}
+                            strokeLinecap="round"
+                            stroke="#8b5cf6"
+                            variants={line}
+                            strokeMiterlimit={10}
+                            strokeWidth={20}
+                            points="159.4,304.5 159.4,163.2 250,106.8 339.3,163.2 339.3,304.5" />
+                        <motion.line fill='none' stroke="#8b5cf6" variants={line} strokeWidth={20}
+                            strokeLinecap="round" x1="250" y1="106.8" x2="250" y2="328.8" />
                     </motion.svg>
                 </AnimatePresence>
             </div>
