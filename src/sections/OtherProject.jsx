@@ -61,7 +61,7 @@ const OtherProject = () => {
                 <div className="w-5 h-5">
                   <FaFolder />
                 </div>
-                <a href={project.link} target="_blank" rel="noreferrer" aria-label="External Link">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label="External Link">
                   <div className="w-5 h-5">
                     <FaGithub />
                   </div>

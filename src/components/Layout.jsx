@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from 'react'
+import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import Navbar from './Navbar'
 import Footer from './Footer';
 import SideSocmed from './SideSocmed';
 import Loader from './Loader';
 
-export default function LayoutPage({ children, location }) {
+export default function LayoutPage({ children }) {
 
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => setIsLoading(false), 500)
-    }, [])
-
+        isLoading
+            ? document.querySelector("body").classList.add("loading")
+            : document.querySelector("body").classList.remove("loading");
+    }, [isLoading])
 
     return (
         <>
             {isLoading ? (
-                <Loader />
+                <Loader setLoading={setLoading} />
             ) : (
                 <div>
                     <header>

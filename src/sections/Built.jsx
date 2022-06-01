@@ -32,7 +32,8 @@ const Built = () => {
               Sebuah aplikasi web berbasis kecerdasan buatan atau AI. Dengan cabang Machine
               Learning. Aplikasi untuk pengklasifikasian kualitas minuman wine.
             </p>
-            <a className="hover:text-violet-500" href="https://github.com/azharluthfi14/django-ai-wine" target="_blank">
+            <a className="hover:text-violet-500" href="https://github.com/azharluthfi14/django-ai-wine"
+              target="_blank" rel="noopener noreferrer">
               <FaGithub className={styles.builtItemIcon} />
             </a>
           </div>

@@ -14,8 +14,8 @@ const Navbar = () => {
       : "ease-out duration-200 dark:bg-dark-900 py-5"
       }`,
     navbarContainer: `mx-5 md:mx-12 flex flex-wrap justify-between items-center`,
-    navbarLogo: `flex items-center`,
-    navbarLogoItem: `self-center text-xl font-semibold whitespace-nowrap dark:text-white`,
+    navbarLogo: `flex items-center w-10 h-10 border-2 border-violet-500 justify-center rounded-lg`,
+    navbarLogoItem: `self-center text-xl font-bold whitespace-nowrap text-violet-500`,
     navbarMenu: `hidden w-full lg:flex lg:flex-row lg:items-center lg:justify-between lg:w-auto md:font-medium`,
     navbarMenuListWrapper: `flex flex-row space-x-10`,
     navbarLink: `block py-2 pr-5 text-center dark:text-white hover:dark:text-violet-700 cursor-pointer`,
@@ -70,7 +70,7 @@ const Navbar = () => {
       <nav className={style.navbar}>
         <div className={style.navbarContainer}>
           <div className={style.navbarLogo}>
-            <span className={style.navbarLogoItem}>Azhar.</span>
+            <span className={style.navbarLogoItem}>A</span>
           </div>
           <div className={style.navbarMenu}>
             <motion.ul
