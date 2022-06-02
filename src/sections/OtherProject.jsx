@@ -48,8 +48,8 @@ const OtherProject = () => {
 
         <motion.div initial="hidden"
           animate="visible"
-          variants={list} className="text-slate-800  dark:text-slate-200 relative grid md:grid-cols-2 
-          lg:grid-cols-3 gap-5">
+          variants={list} className="text-slate-800 gap-5  dark:text-slate-200 relative grid md:grid-cols-2 md:gap-4
+          lg:grid-cols-3 lg:gap-3">
           {projectsToShow.map((project, i) => (
             <motion.div
               custom={i}
@@ -67,16 +67,16 @@ const OtherProject = () => {
                   </div>
                 </a>
               </header>
-              <div className="space-y-5 mb-10 h-[200px]">
+              <div className="space-y-5 mb-10">
                 <h1 className="font-bold text-2xl lg:text-xl group-hover:text-violet-500">{project.title}</h1>
                 <p className="text-base leading-relaxed tracking-wide">{project.desc}</p>
               </div>
-              <footer className="flex flex-row items-center space-x-4 w-full text-sm font-mono">
-                {project.tech.map((item, i) => (
-                  <span key={i}>
-                    <span key={i}>{item}</span>
-                  </span>
-                ))}
+              <footer>
+                <ul className="flex flex-wrap items-end grow space-x-3 list-none">
+                  {project.tech.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
               </footer>
             </motion.div>
           ))}

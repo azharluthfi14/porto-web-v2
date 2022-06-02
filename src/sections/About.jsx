@@ -16,7 +16,7 @@ const About = () => {
   const styles = {
     aboutSection: `pt-10 pb-28 text-slate-800 dark:text-slate-200`,
     aboutHeading: `text-4xl text-left relative font-bold mb-7`,
-    aboutContent: `flex flex-col md:flex-row gap-5 md:space-x-10 justify-between`,
+    aboutContent: `flex flex-col lg:flex-row gap-5 md:space-x-10 justify-between`,
     aboutText: `space-y-3 order-2 lg:order-none tracking-wide leading-7 md:leading-6`,
     aboutListSkills: `grid grid-cols-2 list-disc mx-5 gap-2`,
     aboutImageContent: `flex justify-center order-1 w-full items-center`,

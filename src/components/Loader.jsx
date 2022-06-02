@@ -9,6 +9,7 @@ export default function Loader({ setLoading }) {
     const containerAnimation = {
         visible: {
             transition: {
+                delayChildren: 0.5,
                 pathLength: {
                     delay: 0.5,
                     duration: 1.5,
@@ -88,7 +89,7 @@ export default function Loader({ setLoading }) {
 
     return (
         <div className='h-screen flex justify-center items-center dark:bg-dark-900'>
-            <div className='w-32 h-32'>
+            <div className='w-24 h-24'>
                 <AnimatePresence type='crossfade'>
                     <motion.svg
                         viewBox="0 0 500 500"

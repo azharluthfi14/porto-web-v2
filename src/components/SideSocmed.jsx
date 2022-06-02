@@ -13,7 +13,7 @@ export default function SideSocmed() {
 
     return (
 
-        <aside className="hidden md:fixed bottom-0 h-screen w-40 md:flex flex-col justify-end items-center p-6">
+        <aside className="hidden lg:fixed bottom-0 h-screen w-40 lg:flex flex-col justify-end items-center p-6">
             <div className="bottom-0 space-y-12 py-10 text-slate-800 dark:text-slate-200">
                 {socialMedia.map(item => (
                     <div key={item.id} className='hover:text-violet-500 motion-reduce:transition-none motion-reduce:hover:transform-none hover:-translate-y-1 duration-100 ease-in'>

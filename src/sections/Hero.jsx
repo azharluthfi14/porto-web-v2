@@ -7,7 +7,7 @@ const Hero = () => {
     heroContent: `flex space-y-5 flex-col justify-center text-slate-800 dark:text-slate-200`,
     heroHeading: `text-xl text-violet-500`,
     heroSubHeading1: `text-4xl tracking-wide md:text-8xl font-black`,
-    heroSubHeading2: `text-5xl md:text-7xl font-black`,
+    heroSubHeading2: `text-4xl md:text-7xl font-black`,
     heroText: `md:text-md md:w-4/6 leading-7`,
   };
   return (

@@ -128,7 +128,7 @@ const Navbar = () => {
                 <div className={style.buttonCloseMobileMenu} onClick={() => setToggle(false)}>
                   <HiX />
                 </div>
-                <motion.div>
+                <motion.div whileTap={{ rotate: 360 }}>
                   <ButtonTheme />
                 </motion.div>
               </div>

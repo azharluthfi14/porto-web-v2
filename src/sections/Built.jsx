@@ -8,7 +8,7 @@ const Built = () => {
     builtSection: `pt-10 pb-28   flex flex-col justify-center text-slate-800 dark:text-slate-200`,
     builtContent: `text-slate-800 dark:text-slate-200`,
 
-    builtItem: `grid grid-flow-row md:grid-cols-2 md:space-x-14 mb-10`,
+    builtItem: `grid grid-flow-row lg:grid-cols-2 md:space-x-14 mb-10`,
     builtItemCover: `p-1.5 rounded-lg mb-8 bg-[#1f1f1f] overflow-hidden dark:border dark:border-dark-500`,
     builtItemCoverImg: `object-cover w-full hover:scale-110	ease-in-out duration-500`,
     builtItemHeading: `text-xl text-violet-600`,
@@ -39,7 +39,7 @@ const Built = () => {
           </div>
         </div>
 
-        <div className="grid grid-flow-row md:grid-cols-2 mt-10">
+        <div className="grid grid-flow-row lg:grid-cols-2 mt-10">
           <div className="space-y-5 order-2 lg:order-none flex flex-col justify-center">
             <h1 className="text-xl text-violet-600">Featured Project</h1>
             <h2 className="text-3xl font-bold">Cryptocap</h2>
@@ -47,7 +47,9 @@ const Built = () => {
               Memanfaatkan API dari Coinranking. Menampilkan sejumlah harga mata uang kripto seperti
               Bitcoin, Ethereum, dan Binance secara real-time.
             </p>
-            <FaGithub className="w-5 h-5" />
+            <a href="https://github.com/azharluthfi14/cryptocap-dashboard" target="_blank" rel="noopener noreferrer">
+              <FaGithub className={styles.builtItemIcon} />
+            </a>
           </div>
           <div className="p-1.5 order-1 rounded-lg bg-white mb-8 border overflow-hidden border-gray-200">
             <img className={styles.builtItemCoverImg} src={project2} draggable="false" loading="lazy" alt="project1" />

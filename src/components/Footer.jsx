@@ -10,7 +10,7 @@ const Footer = () => {
         { id: 4, icon: FaLinkedin, url: 'https://www.linkedin.com/in/azhar-luthfi14' }
     ]
     return (
-        <div className='py-10 w-full'>
+        <div className='py-5 w-full'>
             <div className='lg:hidden flex justify-center 
             text-slate-800 dark:text-slate-200 items-center space-x-10 mb-6'>
                 {socialMedia.map(item => (
