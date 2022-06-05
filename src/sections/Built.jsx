@@ -15,6 +15,7 @@ const Built = () => {
     builtItemSubheading: `text-3xl font-bold`,
     builtItemText: `leading-7`,
     builtItemIcon: `w-5 h-5`,
+    builtItemLink: `hover:text-violet-500 w-max`,
   };
 
   return (
@@ -23,7 +24,13 @@ const Built = () => {
         <h1 className="text-4xl mb-8 md:mb-7 font-bold">Some Things I've Built</h1>
         <div className={styles.builtItem}>
           <figure className={styles.builtItemCover}>
-            <img className={styles.builtItemCoverImg} draggable="false" loading="lazy" src={project1} alt="project1" />
+            <img
+              className={styles.builtItemCoverImg}
+              draggable="false"
+              loading="lazy"
+              src={project1}
+              alt="project1"
+            />
           </figure>
           <div className="space-y-5 flex flex-col justify-center">
             <h1 className={styles.builtItemHeading}>Featured Project</h1>
@@ -32,8 +39,12 @@ const Built = () => {
               Sebuah aplikasi web berbasis kecerdasan buatan atau AI. Dengan cabang Machine
               Learning. Aplikasi untuk pengklasifikasian kualitas minuman wine.
             </p>
-            <a className="hover:text-violet-500" href="https://github.com/azharluthfi14/django-ai-wine"
-              target="_blank" rel="noopener noreferrer">
+            <a
+              className={styles.builtItemLink}
+              href="https://github.com/azharluthfi14/django-ai-wine"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub className={styles.builtItemIcon} />
             </a>
           </div>
@@ -47,12 +58,23 @@ const Built = () => {
               Memanfaatkan API dari Coinranking. Menampilkan sejumlah harga mata uang kripto seperti
               Bitcoin, Ethereum, dan Binance secara real-time.
             </p>
-            <a href="https://github.com/azharluthfi14/cryptocap-dashboard" target="_blank" rel="noopener noreferrer">
+            <a
+              className={styles.builtItemLink}
+              href="https://github.com/azharluthfi14/cryptocap-dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub className={styles.builtItemIcon} />
             </a>
           </div>
           <div className="p-1.5 order-1 rounded-lg bg-white mb-8 border overflow-hidden border-gray-200">
-            <img className={styles.builtItemCoverImg} src={project2} draggable="false" loading="lazy" alt="project1" />
+            <img
+              className={styles.builtItemCoverImg}
+              src={project2}
+              draggable="false"
+              loading="lazy"
+              alt="project1"
+            />
           </div>
         </div>
       </section>

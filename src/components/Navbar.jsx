@@ -3,17 +3,18 @@ import { Link } from "react-scroll";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 import ButtonTheme from "./ButtonTheme";
-import navLogo from '../favicon.svg'
+import navLogo from "../favicon.svg";
 
 const Navbar = () => {
   const [scrolled, setSrolled] = useState(false);
   const [toggle, setToggle] = useCycle(false, true);
 
   const style = {
-    navbar: `fixed top-0 w-full z-30 ${scrolled
-      ? "py-3 shadow-md bg-white/50 backdrop-blur-md ease-in duration-200 dark:bg-dark-800/90"
-      : "ease-out duration-200 dark:bg-dark-900 py-5"
-      }`,
+    navbar: `fixed top-0 w-full z-30 ${
+      scrolled
+        ? "py-3 shadow-md bg-white/50 backdrop-blur-md ease-in duration-200 dark:bg-dark-800/90"
+        : "ease-out duration-200 dark:bg-dark-900 py-5"
+    }`,
     navbarContainer: `mx-5 md:mx-12 flex flex-wrap justify-between items-center`,
     navbarLogoContainer: `flex items-center justify-center`,
     navbarLogo: `w-7 h-7`,
@@ -132,7 +133,7 @@ const Navbar = () => {
                   <ButtonTheme />
                 </motion.div>
               </div>
-              <ul className="flex flex-col justify-center items-center space-y-7 p-5">
+              <ul className="flex flex-col justify-center space-y-7 p-5">
                 {navLink &&
                   navLink.map((item, i) => (
                     <li key={i}>
@@ -143,7 +144,7 @@ const Navbar = () => {
                         smooth={true}
                         offset={-50}
                         duration={500}
-                        className="block py-2 pr-5 text-slate-800 dark:text-white cursor-pointer"
+                        className="block py-2 p-5 text-slate-800 dark:text-white cursor-pointer"
                         onClick={() => setToggle(false)}
                       >
                         {item.name}

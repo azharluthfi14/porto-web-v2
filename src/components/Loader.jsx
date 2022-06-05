@@ -2,6 +2,10 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Loader({ setLoading }) {
+  const styles = {
+    loaderWrapper: `h-screen flex justify-center items-center dark:bg-dark-900`,
+  };
+
   const containerAnimation = {
     hidden: { opacity: 0 },
     visible: {
@@ -11,7 +15,7 @@ export default function Loader({ setLoading }) {
       transition: {
         scale: {
           delay: 3,
-          duration: 0.5,
+          duration: 0.3,
           ease: "backIn",
         },
         backgroundColor: {
@@ -69,7 +73,7 @@ export default function Loader({ setLoading }) {
   };
 
   return (
-    <div className="h-screen flex justify-center items-center dark:bg-dark-900">
+    <div className={styles.loaderWrapper}>
       <AnimatePresence type="crossfade">
         <motion.div
           variants={containerAnimation}

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { FadeInUp } from "../components/variants/FadeInUp";
 
 const Hero = () => {
   const styles = {
@@ -10,25 +9,46 @@ const Hero = () => {
     heroSubHeading2: `text-4xl md:text-7xl font-black`,
     heroText: `md:text-md md:w-4/6 leading-7`,
   };
+
+  const fadeAnimation = {
+    initial: {
+      y: 80,
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+        type: "spring",
+        ease: [0.17, 0.67, 0.83, 0.67],
+      },
+    },
+  };
+
   return (
     <>
       <section id="hero" className={styles.hero}>
         <motion.div
-          variants={FadeInUp}
+          variants={fadeAnimation}
           initial="initial"
           animate="animate"
           className={styles.heroContent}
         >
-          <motion.h1 variants={FadeInUp} className={styles.heroHeading}>
+          <motion.h1 variants={fadeAnimation} className={styles.heroHeading}>
             Hi, my name is
           </motion.h1>
-          <motion.h2 variants={FadeInUp} className={styles.heroSubHeading1}>
+          <motion.h2 variants={fadeAnimation} className={styles.heroSubHeading1}>
             Azhar Luthfi.
           </motion.h2>
-          <motion.h3 variants={FadeInUp} className={styles.heroSubHeading2}>
+          <motion.h3 variants={fadeAnimation} className={styles.heroSubHeading2}>
             I build things for the web.
           </motion.h3>
-          <motion.p variants={FadeInUp} className={styles.heroText}>
+          <motion.p variants={fadeAnimation} className={styles.heroText}>
             Seseorang yang tertarik pada dunia IT. Saat ini sedang menekuni dunia pemograman web.
           </motion.p>
         </motion.div>

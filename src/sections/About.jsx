@@ -1,24 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import avatar from "../assets/avatar2.jpg";
 
 const About = () => {
-  const skills = [
-    "JavaScript (ES6+)",
-    "HTML",
-    "React",
-    "Python",
-    "Django",
-    "CSS",
-    "Photoshop",
-    "Figma",
-  ];
+  const skills = ["JavaScript", "HTML", "React", "Python", "Django", "CSS", "Photoshop", "Figma"];
 
   const styles = {
     aboutSection: `pt-10 pb-28 text-slate-800 dark:text-slate-200`,
-    aboutHeading: `text-4xl text-left relative font-bold mb-7`,
+    aboutHeading: `text-4xl text-left relative font-bold mb-10 lg:mb-7`,
     aboutContent: `flex flex-col lg:flex-row gap-5 md:space-x-10 justify-between`,
-    aboutText: `space-y-3 order-2 lg:order-none tracking-wide leading-7 md:leading-6`,
-    aboutListSkills: `grid grid-cols-2 list-disc mx-5 gap-2`,
+    aboutText: `space-y-3 order-2 mt-5 md:mt-0 lg:order-none tracking-wide leading-7 md:leading-6`,
+    aboutListSkills: `grid grid-cols-2 list-disc mx-5 gap-3 md:gap-2`,
     aboutImageContent: `flex justify-center order-1 w-full items-center`,
     aboutImage: `relative rounded-md w-52 md:w-72 grayscale hover:grayscale-0`,
   };
@@ -47,9 +38,9 @@ const About = () => {
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
           </ul>
         </div>
-        <picture className={styles.aboutImageContent}>
+        <figure className={styles.aboutImageContent}>
           <img className={styles.aboutImage} src={avatar} alt="avatar" />
-        </picture>
+        </figure>
       </div>
     </section>
   );
