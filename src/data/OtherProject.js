@@ -18,7 +18,7 @@ export const otherProject = [
     title: "Cryptocap",
     desc: "Memanfaatkan API dari Coinranking. Menampilkan sejumlah harga mata uang kripto seperti Bitcoin, Ethereum, dan Binance secara real-time.",
     link: "https://github.com/azharluthfi14/cryptocap-dashboard",
-    tech: ["React", "Coinranking API", "Tailwindcss"],
+    tech: ["React", "Vite", "Tailwind"],
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ export const otherProject = [
   },
   {
     id: 6,
-    title: "Dockerizing Django dengan Postgres, Gunicorn, dan Nginx",
+    title: "Dockerizing Django",
     desc: "Men-dockerize aplikasi Django dan membuat nya menjadi sebuah image docker beserta PostgreSQL, kemudian di jalankan sebagai container.",
     link: "https://github.com/azharluthfi14/django-nginx-docker",
     tech: ["Docker", "Django", "Python"],
@@ -47,5 +47,26 @@ export const otherProject = [
     desc: "Web landingpage cryptocurrency yang buat menggunakan Vite, ReactJs and TailwindCSS",
     link: "https://github.com/azharluthfi14/Cryptocurrency-LandingPage",
     tech: ["React Js", "Javascript", "Tailwind"],
+  },
+  {
+    id: 8,
+    title: "OpenMusicAPI",
+    desc: "Musik API dengan fitur seperti menambahkan lagu, membuat playlist, memasukan lagu ke dalam playlist, hingga membagikan playlist kepada pengguna lain",
+    link: "https://github.com/azharluthfi14/OpenMusicAPI",
+    tech: ["Redis", "Hapi Js", "PostgreSQL"],
+  },
+  {
+    id: 9,
+    title: "NotesAppAPI",
+    desc: "Membuat Notes API dengan framework javascript yaitu Hapi Js dan RabbitMQ sebagai message broker serta Redis.",
+    link: "https://github.com/azharluthfi14/notesapp-backend-hapi",
+    tech: ["Redis", "Javascript", "Hapi Js"],
+  },
+  {
+    id: 10,
+    title: "NotesAppAPI Consumer",
+    desc: "Implementasi message broker pada NotesAppAPI untuk fitur export yang akan dikirimkan melalui email.",
+    link: "https://github.com/azharluthfi14/notesapp-api-consumer",
+    tech: ["Redis", "Javascript", "RabbitMQ"],
   },
 ];

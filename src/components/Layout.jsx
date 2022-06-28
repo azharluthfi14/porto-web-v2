@@ -24,7 +24,7 @@ export default function LayoutPage({ children }) {
           </header>
           <SideSocmed />
           <div className="dark:bg-dark-900">
-            <main className="mx-8 md:mx-20 lg:mx-40">
+            <main className="mx-8 md:mx-20 lg:mx-44">
               {children}
               <Footer />
             </main>

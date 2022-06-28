@@ -5,10 +5,10 @@ import project2 from "../assets/cryptodashboard.jpeg";
 
 const Built = () => {
   const styles = {
-    builtSection: `pt-10 pb-28   flex flex-col justify-center text-slate-800 dark:text-slate-200`,
+    builtSection: `pt-10 pb-28 flex flex-col justify-center text-slate-800 dark:text-slate-200`,
     builtContent: `text-slate-800 dark:text-slate-200`,
 
-    builtItem: `grid grid-flow-row lg:grid-cols-2 md:space-x-14 mb-10`,
+    builtItem: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mb-10`,
     builtItemCover: `p-1.5 rounded-lg mb-8 bg-[#1f1f1f] overflow-hidden dark:border dark:border-dark-500`,
     builtItemCoverImg: `object-cover w-full hover:scale-110	ease-in-out duration-500`,
     builtItemHeading: `text-xl text-violet-600`,
@@ -50,8 +50,8 @@ const Built = () => {
           </div>
         </div>
 
-        <div className="grid grid-flow-row lg:grid-cols-2 mt-10">
-          <div className="space-y-5 order-2 lg:order-none flex flex-col justify-center">
+        <div className="grid grid-flow-row md:grid-cols-2 md:space-x-10 mt-10">
+          <div className="space-y-5 flex flex-col justify-center">
             <h1 className="text-xl text-violet-600">Featured Project</h1>
             <h2 className="text-3xl font-bold">Cryptocap</h2>
             <p className="leading-7">
@@ -67,7 +67,7 @@ const Built = () => {
               <FaGithub className={styles.builtItemIcon} />
             </a>
           </div>
-          <div className="p-1.5 order-1 rounded-lg bg-white mb-8 border overflow-hidden border-gray-200">
+          <figure className="p-1.5 order-1 rounded-lg bg-white mb-8 border overflow-hidden border-gray-200">
             <img
               className={styles.builtItemCoverImg}
               src={project2}
@@ -75,7 +75,7 @@ const Built = () => {
               loading="lazy"
               alt="project1"
             />
-          </div>
+          </figure>
         </div>
       </section>
     </>

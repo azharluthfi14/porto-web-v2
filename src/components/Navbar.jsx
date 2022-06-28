@@ -7,7 +7,7 @@ import navLogo from "../favicon.svg";
 
 const Navbar = () => {
   const [scrolled, setSrolled] = useState(false);
-  const [toggle, setToggle] = useCycle(false, true);
+  const [toggle, setToggle] = useCycle(true, false);
 
   const style = {
     navbar: `fixed top-0 w-full z-30 ${
@@ -22,11 +22,10 @@ const Navbar = () => {
     navbarMenuListWrapper: `flex flex-row space-x-10`,
     navbarLink: `block py-2 pr-5 text-center dark:text-white hover:dark:text-violet-700 cursor-pointer`,
     navbarLinkActive: `text-violet-700 dark:text-violet-500`,
-    navbarBtn: `border-l-[0.01rem] dark:border-dark-500 pl-5`,
+    navbarBtn: `border-l-[0.01rem] dark:border-dark-500`,
     buttonOpenMenu: `flex lg:hidden cursor-pointer text-xl rounded-full p-2 text-slate-900 hover:bg-gray-200 dark:text-white dark:hover:bg-dark-500`,
-
     mobileMenuWrapper: `fixed shadow-md border-l top-0 right-0 bottom-0 h-screen lg:hidden bg-white dark:bg-dark-800 dark:border-0`,
-    mobileMenuHeader: `flex justify-between align-middle relative p-5 items-center`,
+    mobileMenuHeader: `flex justify-between align-middle relative px-5 py-2.5 items-center`,
     buttonCloseMobileMenu: `flex lg:hidden cursor-pointer text-xl rounded-full p-2 text-slate-900 hover:bg-gray-200 dark:text-white dark:hover:bg-dark-500`,
   };
 
@@ -126,12 +125,12 @@ const Navbar = () => {
               className={style.mobileMenuWrapper}
             >
               <div className={style.mobileMenuHeader}>
-                <div className={style.buttonCloseMobileMenu} onClick={() => setToggle(false)}>
-                  <HiX />
-                </div>
                 <motion.div whileTap={{ rotate: 360 }}>
                   <ButtonTheme />
                 </motion.div>
+                <div className={style.buttonCloseMobileMenu} onClick={() => setToggle(false)}>
+                  <HiX />
+                </div>
               </div>
               <ul className="flex flex-col justify-center space-y-7 p-5">
                 {navLink &&

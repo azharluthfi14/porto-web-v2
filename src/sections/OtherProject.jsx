@@ -10,17 +10,16 @@ const OtherProject = () => {
     otherProjectSection: `pt-10 pb-28`,
     otherProjectTitleWrapper: `flex justify-center items-center mb-12`,
     otherProjectTitle: `text-4xl font-bold text-slate-800 dark:text-slate-200`,
-    cardProjectWrapper: `text-slate-800 gap-5  dark:text-slate-200 relative grid md:grid-cols-2 md:gap-4
-    lg:grid-cols-3 lg:gap-3`,
-    cardProject: `bg-white group  hover:bg-slate-100 dark:bg-dark-800 dark:border-dark-700 relative
+    cardProjectWrapper: `text-slate-800 gap-5 dark:text-slate-200 relative grid md:grid-cols-2 md:gap-2
+    xl:grid-cols-3 relative xl:gap-3`,
+    cardProject: `bg-white group w-full hover:bg-violet-100 dark:bg-dark-800 dark:border-dark-700 relative
     duration-300 ease-in-out cursor-pointer shadow-md border rounded-md p-5`,
-    cardHeader: `flex justify-between p-2 mb-3`,
+    cardHeader: `flex justify-between mb-5`,
     cardIcon: `w-5 h-5`,
     cardBodyWrapper: `space-y-5 mb-10`,
     cardTitle: `font-bold text-2xl lg:text-xl group-hover:text-violet-500`,
-    cardDesc: `text-base leading-relaxed tracking-wide`,
-    cardFooterWrapper: `flex flex-wrap items-end grow space-x-3 list-none`,
-    cardFooterItem: `text-xs md:text-base`,
+    cardDesc: `leading-normal tracking-wide`,
+    cardFooterWrapper: `flex flex-wrap items-end space-x-2  md:space-x-3 text-xs font-mono md:text-sm grow`,
   };
 
   const [showMore, setShowMore] = useState(false);
@@ -79,9 +78,7 @@ const OtherProject = () => {
               <footer>
                 <ul className={styles.cardFooterWrapper}>
                   {project.tech.map((item, i) => (
-                    <li className={styles.cardFooterItem} key={i}>
-                      {item}
-                    </li>
+                    <li key={i}>{item}</li>
                   ))}
                 </ul>
               </footer>
