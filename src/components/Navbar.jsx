@@ -7,7 +7,7 @@ import navLogo from "../favicon.svg";
 
 const Navbar = () => {
   const [scrolled, setSrolled] = useState(false);
-  const [toggle, setToggle] = useCycle(true, false);
+  const [toggle, setToggle] = useCycle(false, true);
 
   const style = {
     navbar: `fixed top-0 w-full z-30 ${
@@ -22,7 +22,7 @@ const Navbar = () => {
     navbarMenuListWrapper: `flex flex-row space-x-10`,
     navbarLink: `block py-2 pr-5 text-center dark:text-white hover:dark:text-violet-700 cursor-pointer`,
     navbarLinkActive: `text-violet-700 dark:text-violet-500`,
-    navbarBtn: `border-l-[0.01rem] dark:border-dark-500`,
+    navbarBtn: `border-l-[0.01rem] pl-5 dark:border-dark-500`,
     buttonOpenMenu: `flex lg:hidden cursor-pointer text-xl rounded-full p-2 text-slate-900 hover:bg-gray-200 dark:text-white dark:hover:bg-dark-500`,
     mobileMenuWrapper: `fixed shadow-md border-l top-0 right-0 bottom-0 h-screen lg:hidden bg-white dark:bg-dark-800 dark:border-0`,
     mobileMenuHeader: `flex justify-between align-middle relative px-5 py-2.5 items-center`,
@@ -71,7 +71,7 @@ const Navbar = () => {
       <nav className={style.navbar}>
         <div className={style.navbarContainer}>
           <div className={style.navbarLogoContainer}>
-            <img src={navLogo} className={style.navbarLogo} alt="" />
+            <img src={navLogo} className={style.navbarLogo} alt="logo-nav" />
           </div>
           <div className={style.navbarMenu}>
             <motion.ul
