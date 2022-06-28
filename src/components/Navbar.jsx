@@ -20,7 +20,7 @@ const Navbar = () => {
     navbarLogo: `w-7 h-7`,
     navbarMenu: `hidden w-full lg:flex lg:flex-row lg:items-center lg:justify-between lg:w-auto md:font-medium`,
     navbarMenuListWrapper: `flex flex-row space-x-10`,
-    navbarLink: `block link py-2 pr-5 text-center dark:text-white hover:dark:text-violet-700 cursor-pointer`,
+    navbarLink: `block link py-2 text-center dark:text-white hover:dark:text-violet-700 cursor-pointer`,
     navbarLinkActive: `text-violet-700 dark:text-violet-500`,
     navbarBtn: `border-l-[0.01rem] pl-5 dark:border-dark-500`,
     buttonOpenMenu: `flex lg:hidden cursor-pointer text-xl rounded-full p-2 text-slate-900 hover:bg-gray-200 dark:text-white dark:hover:bg-dark-500`,
@@ -82,7 +82,7 @@ const Navbar = () => {
             >
               {navLink &&
                 navLink.map((item, i) => (
-                  <motion.li variants={slideUp} key={i}>
+                  <motion.li className="pr-5" variants={slideUp} key={i}>
                     <Link
                       to={item.setTo}
                       spy={true}
@@ -143,7 +143,7 @@ const Navbar = () => {
                         smooth={true}
                         offset={-50}
                         duration={500}
-                        className="block py-2 p-5 text-slate-800 dark:text-white cursor-pointer"
+                        className="block py-2 p-5 text-slate-800 dark:text-white cursor-pointer  hover:dark:text-violet-700"
                         onClick={() => setToggle(false)}
                       >
                         {item.name}

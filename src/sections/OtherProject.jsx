@@ -12,7 +12,7 @@ const OtherProject = () => {
     otherProjectTitle: `text-4xl font-bold text-slate-800 dark:text-slate-200`,
     cardProjectWrapper: `text-slate-800 gap-5 dark:text-slate-200 relative grid md:grid-cols-2 md:gap-2
     xl:grid-cols-3 relative xl:gap-3`,
-    cardProject: `bg-white group w-full hover:bg-violet-100 dark:bg-dark-800 dark:border-dark-700 relative
+    cardProject: `bg-white group w-full link hover:bg-violet-100 dark:bg-dark-800 dark:border-dark-700 relative
     duration-300 ease-in-out cursor-pointer shadow-md border rounded-md p-5`,
     cardHeader: `flex justify-between mb-5`,
     cardIcon: `w-5 h-5`,
