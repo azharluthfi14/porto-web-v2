@@ -18,7 +18,7 @@ export default function LayoutPage({ children }) {
       {isLoading ? (
         <Loader setLoading={setLoading} />
       ) : (
-        <div>
+        <>
           <header>
             <Navbar />
           </header>
@@ -29,7 +29,7 @@ export default function LayoutPage({ children }) {
               <Footer />
             </main>
           </div>
-        </div>
+        </>
       )}
     </>
   );
