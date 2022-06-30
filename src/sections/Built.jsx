@@ -67,7 +67,7 @@ const Built = () => {
               <FaGithub className={styles.builtItemIcon} />
             </a>
           </div>
-          <figure className="p-1.5 order-1 rounded-lg bg-white mb-8 border overflow-hidden border-gray-200">
+          <figure className="p-1.5 order-1 rounded-lg bg-white mt-8 md:mt-0 border overflow-hidden border-gray-200">
             <img
               className={styles.builtItemCoverImg}
               src={project2}

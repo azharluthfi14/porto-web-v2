@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-import { HiMenu, HiX } from "react-icons/hi";
 import ButtonTheme from "./ButtonTheme";
 import navLogo from "../favicon.svg";
 
@@ -21,8 +20,9 @@ const Navbar = () => {
     navbarMenu: `hidden w-full lg:flex lg:flex-row lg:items-center lg:justify-between lg:w-auto md:font-medium`,
     navbarMenuListWrapper: `flex flex-row space-x-10`,
     navbarLink: `block link py-2 text-center dark:text-white hover:dark:text-violet-700 cursor-pointer`,
-    navbarLinkActive: `text-violet-700 dark:text-violet-500`,
     navbarBtn: `border-l-[0.01rem] pl-5 dark:border-dark-500`,
+    navbarLinkActive: `text-violet-700 dark:text-violet-500`,
+    navbarLinkMobileActive: `bg-violet-500 text-white rounded-md`,
     buttonOpenMenu: `flex z-50 lg:hidden cursor-pointer text-xl rounded-full p-2 text-slate-900 hover:bg-gray-200 dark:text-white dark:hover:bg-dark-500`,
     mobileMenuWrapper: `fixed shadow-md border-l top-0 right-0 bottom-0 h-screen lg:hidden bg-white dark:bg-dark-800 dark:border-0`,
     mobileMenuHeader: `flex justify-between align-middle relative px-5 py-2.5 items-center`,
@@ -162,11 +162,11 @@ const Navbar = () => {
                       <Link
                         to={item.setTo}
                         spy={true}
-                        activeClass={style.navbarLinkActive}
+                        activeClass={style.navbarLinkMobileActive}
                         smooth={true}
                         offset={-50}
                         duration={500}
-                        className="block py-2 p-5 text-slate-800 dark:text-white cursor-pointer  hover:dark:text-violet-700"
+                        className="block py-2 p-5 text-slate-800 dark:text-white cursor-pointer"
                         onClick={() => setToggle(false)}
                       >
                         {item.name}
