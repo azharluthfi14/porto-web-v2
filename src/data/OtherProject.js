@@ -69,4 +69,11 @@ export const otherProject = [
     link: "https://github.com/azharluthfi14/notesapp-api-consumer",
     tech: ["Redis", "Javascript", "RabbitMQ"],
   },
+  {
+    id: 11,
+    title: "Kalkulator WebApp",
+    desc: "Aplikasi kalkulator simpel berbasis web app dengan HTML,CSS dan Javascript",
+    link: "https://github.com/azharluthfi14/kalkulator-webapp",
+    tech: ["HTML", "Javascript", "CSS"],
+  },
 ];
