@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import LinkTag from "./LinkTag";
 
 const Footer = () => {
   const socialMedia = [
@@ -23,11 +24,11 @@ const Footer = () => {
       <div className={styles.footerSocmedWrapper}>
         {socialMedia.map((item) => (
           <div key={item.id} className={styles.footerSocmedLink}>
-            <a href={item.url} target="_blank">
+            <LinkTag url={item.url}>
               <span>
                 <item.icon fontSize={22} />
               </span>
-            </a>
+            </LinkTag>
           </div>
         ))}
       </div>

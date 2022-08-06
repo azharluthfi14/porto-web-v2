@@ -1,12 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import ButtonTheme from "./ButtonTheme";
 import navLogo from "../favicon.svg";
+import useOnClickOutside from "../hooks/useOnClickOutside";
 
 const Navbar = () => {
   const [scrolled, setSrolled] = useState(false);
-  const [toggle, setToggle] = useCycle(false, true);
+  const [toggle, setToggle] = useState(false);
+
+  const navbarRef = useRef(null);
+
+  const navbarWrapperRef = useRef();
+
+  useOnClickOutside(navbarWrapperRef, () => setToggle(false));
 
   const style = {
     navbar: `fixed top-0 w-full z-20 py-3 ${
@@ -19,7 +26,7 @@ const Navbar = () => {
     navbarLogo: `w-7 h-7`,
     navbarMenu: `hidden w-full lg:flex lg:flex-row lg:items-center lg:justify-between lg:w-auto md:font-medium`,
     navbarMenuListWrapper: `flex flex-row space-x-10`,
-    navbarLink: `block link py-2 text-center dark:text-white hover:dark:text-violet-700 cursor-pointer`,
+    navbarLink: `block select-none link py-2 text-center dark:text-white hover:dark:text-violet-700 cursor-pointer`,
     navbarBtn: `border-l-[0.01rem] pl-5 dark:border-dark-500`,
     navbarLinkActive: `text-violet-700 dark:text-violet-500`,
     navbarLinkMobileActive: `bg-violet-500 text-white rounded-md`,
@@ -28,7 +35,7 @@ const Navbar = () => {
     mobileMenuHeader: `flex justify-between align-middle relative px-5 py-2.5 items-center`,
     buttonCloseMobileMenu: `flex lg:hidden cursor-pointer text-xl rounded-full p-2 text-slate-900 hover:bg-gray-200 dark:text-white dark:hover:bg-dark-500`,
     hamburgerMenu: `z-50 lg:hidden cursor-pointer rounded-full text-lg w-[37px] h-[37px] hover:bg-gray-200 dark:hover:bg-dark-500  flex items-center justify-center relative`,
-    hamburgerLine: `transform transition rounded w-[17px] h-[2px] bg-slate-900 dark:bg-white absolute`,
+    hamburgerLine: `transform transition rounded w-[17px] h-[2px] bg-slate-800 dark:bg-white absolute`,
   };
 
   const slideUp = {
@@ -77,7 +84,7 @@ const Navbar = () => {
         }`}
         aria-hidden="true"
       ></div>
-      <nav className={style.navbar}>
+      <nav ref={navbarWrapperRef} className={style.navbar}>
         <div className={style.navbarContainer}>
           <div className={style.navbarLogoContainer}>
             <img src={navLogo} className={style.navbarLogo} alt="logo-nav" />
@@ -114,7 +121,7 @@ const Navbar = () => {
           </div>
 
           {/* Open menu mobile */}
-          <div onClick={() => setToggle(true)} className={style.hamburgerMenu}>
+          <div onClick={() => setToggle(!toggle)} className={style.hamburgerMenu}>
             <span
               className={`${style.hamburgerLine} ${
                 toggle ? "translate-y-0 rotate-45" : "-translate-y-2"
@@ -137,6 +144,7 @@ const Navbar = () => {
         <AnimatePresence>
           {toggle && (
             <motion.div
+              ref={navbarRef}
               initial={{ width: 0 }}
               animate={{
                 width: 250,

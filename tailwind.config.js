@@ -2,6 +2,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{ js,jsx}"],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      mono: ["Roboto Mono"],
+    },
     extend: {
       colors: {
         dark: {

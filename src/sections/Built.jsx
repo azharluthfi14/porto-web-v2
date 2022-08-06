@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import project1 from "../assets/project1-dark.png";
 import project2 from "../assets/cryptodashboard.jpeg";
+import LinkTag from "../components/LinkTag";
 
 const Built = () => {
   const styles = {
@@ -39,14 +40,12 @@ const Built = () => {
               Sebuah aplikasi web berbasis kecerdasan buatan atau AI. Dengan cabang Machine
               Learning. Aplikasi untuk pengklasifikasian kualitas minuman wine.
             </p>
-            <a
+            <LinkTag
               className={styles.builtItemLink}
-              href="https://github.com/azharluthfi14/django-ai-wine"
-              target="_blank"
-              rel="noopener noreferrer"
+              url="https://github.com/azharluthfi14/django-ai-wine"
             >
               <FaGithub className={styles.builtItemIcon} />
-            </a>
+            </LinkTag>
           </div>
         </div>
 
@@ -58,14 +57,12 @@ const Built = () => {
               Memanfaatkan API dari Coinranking. Menampilkan sejumlah harga mata uang kripto seperti
               Bitcoin, Ethereum, dan Binance secara real-time.
             </p>
-            <a
+            <LinkTag
               className={styles.builtItemLink}
-              href="https://github.com/azharluthfi14/cryptocap-dashboard"
-              target="_blank"
-              rel="noopener noreferrer"
+              url="https://github.com/azharluthfi14/cryptocap-dashboard"
             >
               <FaGithub className={styles.builtItemIcon} />
-            </a>
+            </LinkTag>
           </div>
           <figure className="p-1.5 order-1 rounded-lg bg-white mt-8 md:mt-0 border overflow-hidden border-gray-200">
             <img

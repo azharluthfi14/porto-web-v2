@@ -13,6 +13,7 @@ export const otherProject = [
     link: "https://github.com/azharluthfi14/djangovue-note",
     tech: ["Vue", "Django", "Python"],
   },
+
   {
     id: 3,
     title: "Cryptocap",
@@ -20,6 +21,7 @@ export const otherProject = [
     link: "https://github.com/azharluthfi14/cryptocap-dashboard",
     tech: ["React", "Vite", "Tailwind"],
   },
+
   {
     id: 4,
     title: "Djangorest API TodoApp",
@@ -27,6 +29,7 @@ export const otherProject = [
     link: "https://github.com/azharluthfi14/djangorest-todo",
     tech: ["Django", "Django Rest"],
   },
+
   {
     id: 5,
     title: "Custom user pada Django",
@@ -34,6 +37,7 @@ export const otherProject = [
     link: "https://github.com/azharluthfi14/django-custom-user",
     tech: ["Python", "Django"],
   },
+
   {
     id: 6,
     title: "Dockerizing Django",
@@ -41,27 +45,31 @@ export const otherProject = [
     link: "https://github.com/azharluthfi14/django-nginx-docker",
     tech: ["Docker", "Django", "Python"],
   },
+
   {
     id: 7,
     title: "NEFA",
     desc: "Web landingpage cryptocurrency yang buat menggunakan Vite, ReactJs and TailwindCSS",
     link: "https://github.com/azharluthfi14/Cryptocurrency-LandingPage",
-    tech: ["React Js", "Javascript", "Tailwind"],
+    tech: ["React", "Javascript", "Tailwind"],
   },
+
   {
     id: 8,
     title: "OpenMusicAPI",
     desc: "Musik API dengan fitur seperti menambahkan lagu, membuat playlist, memasukan lagu ke dalam playlist, hingga membagikan playlist kepada pengguna lain",
     link: "https://github.com/azharluthfi14/OpenMusicAPI",
-    tech: ["Redis", "Hapi Js", "PostgreSQL"],
+    tech: ["Redis", "Hapi", "PostgreSQL"],
   },
+
   {
     id: 9,
     title: "NotesAppAPI",
     desc: "Membuat Notes API dengan framework javascript yaitu Hapi Js dan RabbitMQ sebagai message broker serta Redis.",
     link: "https://github.com/azharluthfi14/notesapp-backend-hapi",
-    tech: ["Redis", "Javascript", "Hapi Js"],
+    tech: ["Redis", "RabbitMQ", "Hapi"],
   },
+
   {
     id: 10,
     title: "NotesAppAPI Consumer",
@@ -69,6 +77,7 @@ export const otherProject = [
     link: "https://github.com/azharluthfi14/notesapp-api-consumer",
     tech: ["Redis", "Javascript", "RabbitMQ"],
   },
+
   {
     id: 11,
     title: "Kalkulator WebApp",

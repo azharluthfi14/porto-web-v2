@@ -39,7 +39,7 @@ const About = () => {
           </ul>
         </div>
         <figure className={styles.aboutImageContent}>
-          <img className={styles.aboutImage} src={avatar} alt="avatar" />
+          <img className={styles.aboutImage} src={avatar} draggable="false" alt="avatar" />
         </figure>
       </div>
     </section>

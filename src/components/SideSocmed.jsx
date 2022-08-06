@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import LinkTag from "./LinkTag";
 
 export default function SideSocmed() {
   const socialMedia = [
@@ -22,11 +23,11 @@ export default function SideSocmed() {
       <div className={styles.sideSocmedWrapper}>
         {socialMedia.map((item) => (
           <div key={item.id} className={styles.sideSocmedLink}>
-            <a href={item.url} target="_blank">
+            <LinkTag url={item.url}>
               <span>
                 <item.icon fontSize={25} />
               </span>
-            </a>
+            </LinkTag>
           </div>
         ))}
       </div>

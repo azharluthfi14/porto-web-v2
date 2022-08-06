@@ -10,16 +10,16 @@ const OtherProject = () => {
     otherProjectSection: `pt-10 pb-28`,
     otherProjectTitleWrapper: `flex justify-center items-center mb-12`,
     otherProjectTitle: `text-4xl font-bold text-slate-800 dark:text-slate-200`,
-    cardProjectWrapper: `text-slate-800 gap-5 dark:text-slate-200 relative grid md:grid-cols-2 md:gap-2
+    cardProjectWrapper: `text-slate-800 gap-5 dark:text-slate-200 relative grid sm:grid-cols-2 sm:gap-3
     xl:grid-cols-3 relative xl:gap-3`,
-    cardProject: `bg-white group w-full link hover:bg-violet-100 dark:bg-dark-800 dark:border-dark-700 relative
-    duration-300 ease-in-out cursor-pointer shadow-md border rounded-md p-5`,
-    cardHeader: `flex justify-between mb-5`,
+    cardProject: `bg-white group w-full p-5 link hover:bg-violet-100 dark:bg-dark-800 dark:border-dark-700 relative
+    duration-300 ease-in-out cursor-pointer shadow-md border rounded-md`,
+    cardHeader: `flex mb-8 justify-between`,
     cardIcon: `w-5 h-5`,
-    cardBodyWrapper: `space-y-5 mb-10`,
+    cardBodyWrapper: `space-y-5 mb-10 `,
     cardTitle: `font-bold text-2xl lg:text-xl group-hover:text-violet-500`,
     cardDesc: `leading-normal tracking-wide`,
-    cardFooterWrapper: `flex flex-wrap items-end space-x-2  md:space-x-3 text-xs font-mono md:text-sm grow`,
+    cardFooterWrapper: `flex flex-wrap items-end space-x-2 md:space-x-3 text-xs font-mono md:text-sm grow`,
   };
 
   const [showMore, setShowMore] = useState(false);
@@ -60,7 +60,16 @@ const OtherProject = () => {
           className={styles.cardProjectWrapper}
         >
           {projectsToShow.map((project, i) => (
-            <motion.div custom={i} variants={list} key={project.id} className={styles.cardProject}>
+            <motion.a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="External Link"
+              custom={i}
+              variants={list}
+              key={project.id}
+              className={styles.cardProject}
+            >
               <header className={styles.cardHeader}>
                 <div className={styles.cardIcon}>
                   <FaFolder />
@@ -82,7 +91,7 @@ const OtherProject = () => {
                   ))}
                 </ul>
               </footer>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
         <div className="flex justify-center items-center mt-10">
