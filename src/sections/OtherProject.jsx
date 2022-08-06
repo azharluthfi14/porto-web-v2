@@ -74,11 +74,10 @@ const OtherProject = () => {
                 <div className={styles.cardIcon}>
                   <FaFolder />
                 </div>
-                <LinkTag url={project.link}>
-                  <div className={styles.cardIcon}>
-                    <FaGithub />
-                  </div>
-                </LinkTag>
+
+                <div className={styles.cardIcon}>
+                  <FaGithub />
+                </div>
               </header>
               <div className={styles.cardBodyWrapper}>
                 <h1 className={styles.cardTitle}>{project.title}</h1>
