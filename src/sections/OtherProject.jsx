@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FaFolder, FaGithub } from "react-icons/fa";
 import { otherProject } from "../data/OtherProject";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
-import LinkTag from "../components/LinkTag";
+import { srConfig } from "../config";
+import sr from "../utils/sr";
+import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
 const OtherProject = () => {
   const styles = {
-    otherProjectSection: `pt-10 pb-28`,
+    otherProjectSection: `py-20`,
     otherProjectTitleWrapper: `flex justify-center items-center mb-12`,
     otherProjectTitle: `text-4xl font-bold text-slate-800 dark:text-slate-200`,
     cardProjectWrapper: `text-slate-800 gap-5 dark:text-slate-200 relative grid sm:grid-cols-2 sm:gap-3
@@ -26,6 +28,16 @@ const OtherProject = () => {
   const GRID_LIMIT = 3;
   const firstThree = otherProject.slice(0, GRID_LIMIT);
   const projectsToShow = showMore ? otherProject : firstThree;
+
+  const revealContainer = useRef(null);
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
 
   const list = {
     hidden: {
@@ -49,7 +61,7 @@ const OtherProject = () => {
 
   return (
     <>
-      <section id="other-project" className={styles.otherProjectSection}>
+      <section ref={revealContainer} id="other-project" className={styles.otherProjectSection}>
         <div className={styles.otherProjectTitleWrapper}>
           <h1 className={styles.otherProjectTitle}>Other Projects</h1>
         </div>

@@ -18,6 +18,7 @@
     "react-router-dom": "^6.3.0",
     "react-scroll": "^1.8.7",
     "react-transition-group": "^4.4.2",
+    "scrollreveal": "^4.0.9",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {

@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import project1 from "../assets/project1-dark.png";
 import project2 from "../assets/cryptodashboard.jpeg";
 import LinkTag from "../components/LinkTag";
+import { srConfig } from "../config";
+import sr from "../utils/sr";
+import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
 const Built = () => {
   const styles = {
-    builtSection: `pt-10 pb-28 flex flex-col justify-center text-slate-800 dark:text-slate-200`,
+    builtSection: `py-20 flex flex-col justify-center text-slate-800 dark:text-slate-200`,
     builtContent: `text-slate-800 dark:text-slate-200`,
-
     builtItem: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mb-10`,
     builtItemCover: `p-1.5 rounded-lg mb-8 bg-[#1f1f1f] overflow-hidden dark:border dark:border-dark-500`,
     builtItemCoverImg: `object-cover w-full hover:scale-110	ease-in-out duration-500`,
@@ -19,9 +21,19 @@ const Built = () => {
     builtItemLink: `hover:text-violet-500 w-max`,
   };
 
+  const revealContainer = useRef(null);
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
   return (
     <>
-      <section id="built" className={styles.builtSection}>
+      <section ref={revealContainer} id="built" className={styles.builtSection}>
         <h1 className="text-4xl mb-8 md:mb-7 font-bold">Some Things I've Built</h1>
         <div className={styles.builtItem}>
           <figure className={styles.builtItemCover}>

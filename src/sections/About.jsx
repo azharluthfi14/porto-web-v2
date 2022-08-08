@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import avatar from "../assets/avatar2.jpg";
+import { srConfig } from "../config";
+import sr from "../utils/sr";
+import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
 const About = () => {
-  const skills = ["JavaScript", "HTML", "React", "Python", "Django", "CSS", "Photoshop", "Figma"];
-
   const styles = {
-    aboutSection: `pt-10 pb-28 text-slate-800 dark:text-slate-200`,
+    aboutSection: `py-20 text-slate-800 dark:text-slate-200`,
     aboutHeading: `text-4xl text-left relative font-bold mb-10 lg:mb-7`,
     aboutContent: `flex flex-col lg:flex-row gap-5 md:space-x-10 justify-between`,
     aboutText: `space-y-3 order-2 mt-5 md:mt-0 lg:order-none tracking-wide leading-7 md:leading-6`,
@@ -14,8 +15,19 @@ const About = () => {
     aboutImage: `relative rounded-md w-52 md:w-72 grayscale hover:grayscale-0`,
   };
 
+  const skills = ["JavaScript", "HTML", "React", "Python", "Django", "CSS", "Photoshop", "Figma"];
+  const revealContainer = useRef(null);
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
   return (
-    <section id="about" className={styles.aboutSection}>
+    <section id="about" ref={revealContainer} className={styles.aboutSection}>
       <h1 className={styles.aboutHeading}>About Me</h1>
       <div className={styles.aboutContent}>
         <div className={styles.aboutText}>
