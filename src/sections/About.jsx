@@ -37,9 +37,9 @@ const About = () => {
           </p>
           <p>
             Saya adalah seseorang yang tertarik dengan dunia seputar IT terutama dalam seputar
-            pemograman berbasis website. Pada saat ini saya menyukai bahasa pemograman python dan
-            javascript. Selain memiliki ketertarikan dengan dunia pemograman, saya juga menyukai hal
-            seputar desain grafis seperti UI desain.
+            pemrograman berbasis website. Pada saat ini saya menyukai bahasa pemograman python dan
+            javascript. Selain memiliki ketertarikan dengan dunia pemrograman, saya juga menyukai
+            hal seputar desain grafis seperti UI desain.
           </p>
           <p>
             Saya sangat tertarik untuk mempelajari hal-hal baru terutama dalam dunia IT, dan mampu
