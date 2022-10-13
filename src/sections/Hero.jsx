@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { MdCloudDownload } from "react-icons/md";
+import resume from "../file/resumeazhar.pdf";
 
 const Hero = () => {
   const styles = {
@@ -52,6 +54,15 @@ const Hero = () => {
           <motion.p variants={fadeAnimation} className={styles.heroText}>
             Seseorang yang tertarik pada dunia IT. Saat ini sedang menekuni dunia pemograman web.
           </motion.p>
+          <motion.a
+            className="flex justify-center items-center py-3.5 px-7 ease-in-out duration-300 rounded-md 
+            bg-violet-500 text-white space-x-3 w-max hover:bg-violet-700"
+            href={resume}
+            variants={fadeAnimation}
+          >
+            <MdCloudDownload size={20} />
+            <span>Download Resume</span>
+          </motion.a>
         </motion.div>
       </section>
     </>
