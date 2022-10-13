@@ -59,6 +59,7 @@ const Hero = () => {
             bg-violet-500 text-white space-x-3 w-max hover:bg-violet-700"
             href={resume}
             variants={fadeAnimation}
+            rel="noopener noreferrer"
           >
             <MdCloudDownload size={20} />
             <span>Download Resume</span>
