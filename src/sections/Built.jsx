@@ -1,24 +1,24 @@
 import React, { useEffect, useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import { srConfig } from "../config";
-import project1 from "../assets/project1-dark.png";
-import project2 from "../assets/cryptodashboard.jpeg";
+import project1 from "../assets/filmstar.png";
+import project2 from "../assets/coinancy.png";
 import LinkTag from "../components/LinkTag";
 import sr from "../utils/sr";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
-const Built = () => {
+export default function Built() {
   const styles = {
     builtSection: `py-20 flex flex-col justify-center text-slate-800 dark:text-slate-200`,
     builtContent: `text-slate-800 dark:text-slate-200`,
     builtItem: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mb-10`,
     builtItemSecond: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mt-10`,
-    builtItemCover: `p-1.5 rounded-lg mb-8 bg-[#1f1f1f] overflow-hidden dark:border dark:border-dark-500`,
-    builtItemCoverSecond: `p-1.5 order-1 rounded-lg bg-white mt-8 md:mt-0 border overflow-hidden border-gray-200`,
+    builtItemCover: `p-1 rounded-xl mb-8 bg-gray-900 overflow-hidden dark:border-2 dark:border dark:border-violet-500`,
+    builtItemCoverSecond: `p-1 order-1 dark:border-orange-500 dark:border-2 rounded-xl bg-zinc-900 mt-8 md:mt-0 border overflow-hidden border-gray-200`,
     builtItemCoverImg: `object-cover w-full hover:scale-110	ease-in-out duration-500`,
     builtItemContent: `space-y-5 flex flex-col justify-center`,
-    builtItemHeading: `text-xl text-violet-600`,
-    builtItemSubheading: `text-3xl font-bold`,
+    builtItemHeading: `text-xl`,
+    builtItemSubheading: `text-3xl  bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 font-bold`,
     builtItemText: `leading-7`,
     builtItemIcon: `w-5 h-5`,
     builtItemLink: `hover:text-violet-500 w-max`,
@@ -37,7 +37,9 @@ const Built = () => {
   return (
     <>
       <section ref={revealContainer} id="built" className={styles.builtSection}>
-        <h1 className="text-4xl mb-8 md:mb-7 font-bold">Some Things I've Built</h1>
+        <h1 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-rose-500 mb-8 md:mb-7 font-bold">
+          Some Things I've Built
+        </h1>
         <div className={styles.builtItem}>
           <figure className={styles.builtItemCover}>
             <img
@@ -50,7 +52,7 @@ const Built = () => {
           </figure>
           <div className={styles.builtItemContent}>
             <h1 className={styles.builtItemHeading}>Featured Project</h1>
-            <h2 className={styles.builtItemSubheading}>Manchine Learning Web App</h2>
+            <h2 className={styles.builtItemSubheading}>Filmstar</h2>
             <p className={styles.builtItemText}>
               Sebuah aplikasi web berbasis kecerdasan buatan atau AI. Dengan cabang Machine
               Learning. Aplikasi untuk pengklasifikasian kualitas minuman wine.
@@ -67,7 +69,7 @@ const Built = () => {
         <div className={styles.builtItemSecond}>
           <div className={styles.builtItemContent}>
             <h1 className={styles.builtItemHeading}>Featured Project</h1>
-            <h2 className={styles.builtItemSubheading}>Cryptocap</h2>
+            <h2 className={styles.builtItemSubheading}>Coinancy</h2>
             <p className={styles.builtItemText}>
               Memanfaatkan API dari Coinranking. Menampilkan sejumlah harga mata uang kripto seperti
               Bitcoin, Ethereum, dan Binance secara real-time.
@@ -92,6 +94,4 @@ const Built = () => {
       </section>
     </>
   );
-};
-
-export default Built;
+}

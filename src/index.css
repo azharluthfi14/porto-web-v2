@@ -48,4 +48,49 @@
   .link:hover::before {
     transform: scaleX(1);
   }
+
+  /* Gradient Text Animate */
+  .gradient-animate {
+    background: linear-gradient(-75deg, #feac5e, #c779d0, #4bc0c8);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 4s ease-in-out infinite;
+    -moz-animation: animated_text 4s ease-in-out infinite;
+    -webkit-animation: animated_text 4s ease-in-out infinite;
+  }
+
+  @keyframes animated_text {
+    0% {
+      background-position: 0px 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0px 50%;
+    }
+  }
+
+  .blob {
+    overflow: hidden;
+    width: 20rem;
+    height: 20rem;
+    background-color: #8f44fd;
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    animation: morph 3.75s linear infinite;
+  }
+
+  @keyframes morph {
+    0%,
+    100% {
+      border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    }
+    33% {
+      border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
+    }
+    66% {
+      border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
+    }
+  }
 }

@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { MdCloudDownload } from "react-icons/md";
 import resume from "../file/resumeazhar.pdf";
 
-const Hero = () => {
+export default function Hero() {
   const styles = {
     hero: `h-screen flex flex-col justify-center items-start dark:text-white`,
     heroContent: `flex space-y-4 sm:space-y-5 flex-col justify-center text-slate-800 dark:text-slate-200`,
     heroHeading: `text-xl text-slate-800 dark:text-slate-200`,
     heroHeadingSpan: `text-violet-500`,
-    heroSubHeading1: `text-[45px] tracking-wide sm:text-7xl font-bold text-violet-500`,
+    heroSubHeading1: `text-[45px] tracking-wide sm:text-7xl font-bold gradient-animate`,
     heroSubHeading2: `text-5xl sm:text-6xl font-bold`,
     heroText: `md:text-md md:w-4/6 leading-7`,
   };
@@ -55,19 +55,17 @@ const Hero = () => {
             Seseorang yang tertarik pada dunia IT. Saat ini sedang menekuni dunia pemograman web.
           </motion.p>
           <motion.a
-            className="flex justify-center items-center py-3.5 px-7 ease-in-out duration-300 rounded-md 
-            bg-violet-500 text-white space-x-3 w-max hover:bg-violet-700"
+            className="flex justify-center items-center py-3.5 px-7 rounded-md 
+            bg-dark-700 text-white space-x-3 w-max hover:bg-violet-700"
             href={resume}
             variants={fadeAnimation}
             rel="noopener noreferrer"
           >
             <MdCloudDownload size={20} />
-            <span>Download Resume</span>
+            <span>Download resume</span>
           </motion.a>
         </motion.div>
       </section>
     </>
   );
-};
-
-export default Hero;
+}
