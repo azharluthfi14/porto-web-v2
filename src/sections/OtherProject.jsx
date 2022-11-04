@@ -7,13 +7,13 @@ import { srConfig } from "../config";
 import sr from "../utils/sr";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
-const OtherProject = () => {
+export default function OtherProject() {
   const styles = {
     otherProjectSection: `py-20`,
     otherProjectTitleWrapper: `flex justify-center items-center mb-12`,
-    otherProjectTitle: `text-4xl font-bold text-slate-800 dark:text-slate-200`,
+    otherProjectTitle: `text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-rose-500`,
     cardProjectWrapper: `text-slate-800 gap-5 dark:text-slate-200 relative grid sm:grid-cols-2 sm:gap-3
-    xl:grid-cols-3 relative xl:gap-3`,
+    xl:grid-cols-3  xl:gap-3`,
     cardProject: `bg-white group w-full p-5 link hover:bg-violet-100 dark:bg-dark-800 dark:border-dark-700 relative
     duration-300 ease-in-out cursor-pointer shadow-md border rounded-md`,
     cardHeader: `flex mb-8 justify-between`,
@@ -21,7 +21,7 @@ const OtherProject = () => {
     cardBodyWrapper: `space-y-5 mb-10 `,
     cardTitle: `font-bold text-2xl lg:text-xl group-hover:text-violet-500`,
     cardDesc: `leading-normal tracking-wide`,
-    cardFooterWrapper: `flex flex-wrap items-end space-x-2 md:space-x-3 text-xs font-mono md:text-sm grow`,
+    cardFooterWrapper: `flex items-center justify-between gap-3 text-xs font-mono md:text-sm`,
   };
 
   const [showMore, setShowMore] = useState(false);
@@ -98,7 +98,12 @@ const OtherProject = () => {
               <footer>
                 <ul className={styles.cardFooterWrapper}>
                   {project.tech.map((item, i) => (
-                    <li key={i}>{item}</li>
+                    <li
+                      className="py-1 px-3.5  w-max text-center rounded-full dark:bg-dark-500"
+                      key={i}
+                    >
+                      {item}
+                    </li>
                   ))}
                 </ul>
               </footer>
@@ -120,6 +125,4 @@ const OtherProject = () => {
       </section>
     </>
   );
-};
-
-export default OtherProject;
+}

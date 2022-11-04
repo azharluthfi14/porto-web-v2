@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkSquareAlt } from "react-icons/fa";
 import { srConfig } from "../config";
 import project1 from "../assets/filmstar.png";
 import project2 from "../assets/coinancy.png";
@@ -14,13 +14,14 @@ export default function Built() {
     builtItem: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mb-10`,
     builtItemSecond: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mt-10`,
     builtItemCover: `p-1 rounded-xl mb-8 bg-gray-900 overflow-hidden dark:border-2 dark:border dark:border-violet-500`,
-    builtItemCoverSecond: `p-1 order-1 dark:border-orange-500 dark:border-2 rounded-xl bg-zinc-900 mt-8 md:mt-0 border overflow-hidden border-gray-200`,
+    builtItemCoverSecond: `p-1 order-1 dark:border-orange-500 dark:border dark:border-2 rounded-xl bg-zinc-900 mt-8 md:mt-0 border overflow-hidden`,
     builtItemCoverImg: `object-cover w-full hover:scale-110	ease-in-out duration-500`,
-    builtItemContent: `space-y-5 flex flex-col justify-center`,
+    builtItemContent: `space-y-5 flex flex-col relative justify-center`,
     builtItemHeading: `text-xl`,
-    builtItemSubheading: `text-3xl  bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 font-bold`,
+    builtItemSubheading: `text-3xl w-max bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 font-bold`,
     builtItemText: `leading-7`,
-    builtItemIcon: `w-5 h-5`,
+    builtItemIcon: `w-5 h-5 hover:text-violet-500 motion-reduce:transition-none
+    motion-reduce:hover:transform-none hover:-translate-y-1 duration-100 ease-in`,
     builtItemLink: `hover:text-violet-500 w-max`,
   };
 
@@ -52,34 +53,48 @@ export default function Built() {
           </figure>
           <div className={styles.builtItemContent}>
             <h1 className={styles.builtItemHeading}>Featured Project</h1>
-            <h2 className={styles.builtItemSubheading}>Filmstar</h2>
-            <p className={styles.builtItemText}>
-              Sebuah aplikasi web berbasis kecerdasan buatan atau AI. Dengan cabang Machine
-              Learning. Aplikasi untuk pengklasifikasian kualitas minuman wine.
-            </p>
-            <LinkTag
-              className={styles.builtItemLink}
-              url="https://github.com/azharluthfi14/django-ai-wine"
-            >
-              <FaGithub className={styles.builtItemIcon} />
+            <LinkTag url="https://filmstar.netlify.app" style={styles.builtItemSubheading}>
+              Filmstar
             </LinkTag>
+            <p className={styles.builtItemText}>
+              Sebuah aplikasi web yang menampilkan film dan series populer dari berbagai macam
+              belahan dunia. Memiliki banyak kategori genre film dan series.
+            </p>
+            <div className="flex flex-row space-x-6">
+              <LinkTag
+                className={styles.builtItemLink}
+                url="https://github.com/azharluthfi14/ifilm"
+              >
+                <FaGithub className={styles.builtItemIcon} />
+              </LinkTag>
+              <LinkTag className={styles.builtItemLink} url="https://filmstar.netlify.app">
+                <FaExternalLinkSquareAlt className={styles.builtItemIcon} />
+              </LinkTag>
+            </div>
           </div>
         </div>
 
         <div className={styles.builtItemSecond}>
           <div className={styles.builtItemContent}>
             <h1 className={styles.builtItemHeading}>Featured Project</h1>
-            <h2 className={styles.builtItemSubheading}>Coinancy</h2>
+            <LinkTag url="https://coinancy.netlify.app" style={styles.builtItemSubheading}>
+              Coinancy
+            </LinkTag>
             <p className={styles.builtItemText}>
               Memanfaatkan API dari Coinranking. Menampilkan sejumlah harga mata uang kripto seperti
               Bitcoin, Ethereum, dan Binance secara real-time.
             </p>
-            <LinkTag
-              className={styles.builtItemLink}
-              url="https://github.com/azharluthfi14/cryptocap-dashboard"
-            >
-              <FaGithub className={styles.builtItemIcon} />
-            </LinkTag>
+            <div className="flex flex-row space-x-6">
+              <LinkTag
+                className={styles.builtItemLink}
+                url="https://github.com/azharluthfi14/cryptocap-dashboard"
+              >
+                <FaGithub className={styles.builtItemIcon} />
+              </LinkTag>
+              <LinkTag className={styles.builtItemLink} url="https://coinancy.netlify.app">
+                <FaExternalLinkSquareAlt className={styles.builtItemIcon} />
+              </LinkTag>
+            </div>
           </div>
           <figure className={styles.builtItemCoverSecond}>
             <img

@@ -5,13 +5,13 @@ import sr from "../utils/sr";
 import LinkTag from "../components/LinkTag";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
-const About = () => {
+export default function About() {
   const styles = {
     aboutSection: `py-20 text-slate-800 dark:text-slate-200`,
     aboutHeading: `text-4xl bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-rose-500 text-left font-bold mb-10 lg:mb-7`,
     aboutContent: `flex flex-col lg:flex-row gap-5 md:space-x-10 justify-between`,
     aboutText: `space-y-3 order-2 mt-5 md:mt-0 lg:order-none tracking-wide leading-7 md:leading-6`,
-    aboutListSkills: `grid grid-cols-2 list-disc mx-5 gap-3 md:gap-2`,
+    aboutListSkills: `grid grid-cols-2 gap-3 md:gap-2`,
     aboutImageContent: `flex blob justify-center order-1 w-full items-center`,
     aboutImage: `object-cover h-full grayscale hover:grayscale-0`,
   };
@@ -65,7 +65,15 @@ const About = () => {
           </p>
           <p>Berikut adalah beberapa keahlian yang saya miliki, diantaranya :</p>
           <ul className={styles.aboutListSkills}>
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+            {skills &&
+              skills.map((skill, i) => (
+                <li
+                  className="bg-slate-200 dark:bg-dark-700 py-2  px-10 text-sm text-center w-full md:w-max rounded-full"
+                  key={i}
+                >
+                  {skill}
+                </li>
+              ))}
           </ul>
         </div>
         <figure className={styles.aboutImageContent}>
@@ -74,6 +82,4 @@ const About = () => {
       </div>
     </section>
   );
-};
-
-export default About;
+}
