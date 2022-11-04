@@ -8,7 +8,7 @@ import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 export default function About() {
   const styles = {
     aboutSection: `py-20 text-slate-800 dark:text-slate-200`,
-    aboutHeading: `text-4xl bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-rose-500 text-left font-bold mb-10 lg:mb-7`,
+    aboutHeading: `text-4xl bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 text-left font-bold mb-10 lg:mb-7`,
     aboutContent: `flex flex-col lg:flex-row gap-5 md:space-x-10 justify-between`,
     aboutText: `space-y-3 order-2 mt-5 md:mt-0 lg:order-none tracking-wide leading-7 md:leading-6`,
     aboutListSkills: `grid grid-cols-2 gap-3 md:gap-2`,
@@ -68,7 +68,7 @@ export default function About() {
             {skills &&
               skills.map((skill, i) => (
                 <li
-                  className="bg-slate-200 dark:bg-dark-700 py-2  px-10 text-sm text-center w-full md:w-max rounded-full"
+                  className="bg-gray-200 dark:bg-dark-700 py-2  px-10 text-sm text-center w-full md:w-max rounded-full"
                   key={i}
                 >
                   {skill}

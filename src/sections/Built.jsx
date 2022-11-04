@@ -38,7 +38,7 @@ export default function Built() {
   return (
     <>
       <section ref={revealContainer} id="built" className={styles.builtSection}>
-        <h1 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-rose-500 mb-8 md:mb-7 font-bold">
+        <h1 className="text-4xl bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 mb-8 md:mb-7 font-bold">
           Some Things I've Built
         </h1>
         <div className={styles.builtItem}>
@@ -87,7 +87,7 @@ export default function Built() {
             <div className="flex flex-row space-x-6">
               <LinkTag
                 className={styles.builtItemLink}
-                url="https://github.com/azharluthfi14/cryptocap-dashboard"
+                url="https://github.com/azharluthfi14/coinancy"
               >
                 <FaGithub className={styles.builtItemIcon} />
               </LinkTag>

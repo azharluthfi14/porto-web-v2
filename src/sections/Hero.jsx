@@ -70,12 +70,12 @@ export default function Hero() {
           </motion.p>
           <motion.a
             className="flex justify-center items-center py-3.5 px-7 rounded-md 
-            bg-dark-700 text-white space-x-3 w-max hover:bg-violet-700"
+            bg-dark-700 text-white group space-x-3 w-max hover:bg-opacity-70"
             href={resume}
             variants={fadeAnimation}
             rel="noopener noreferrer"
           >
-            <MdCloudDownload size={20} />
+            <MdCloudDownload className="group-hover:animate-bounce ease-in-out" size={20} />
             <span>Download resume</span>
           </motion.a>
         </motion.div>
