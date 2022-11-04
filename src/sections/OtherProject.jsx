@@ -21,7 +21,7 @@ export default function OtherProject() {
     cardBodyWrapper: `space-y-5 mb-10 `,
     cardTitle: `font-bold text-2xl lg:text-xl group-hover:text-violet-500`,
     cardDesc: `leading-normal tracking-wide`,
-    cardFooterWrapper: `flex items-center justify-between gap-3 text-xs font-mono md:text-sm`,
+    cardFooterWrapper: `flex items-center flex-row gap-1 text-xs font-mono md:text-sm`,
   };
 
   const [showMore, setShowMore] = useState(false);
@@ -99,7 +99,7 @@ export default function OtherProject() {
                 <ul className={styles.cardFooterWrapper}>
                   {project.tech.map((item, i) => (
                     <li
-                      className="py-1 px-3.5  w-max text-center rounded-full dark:bg-dark-500"
+                      className="py-1 px-3.5  w-max text-center rounded-full bg-gray-200 dark:bg-dark-500"
                       key={i}
                     >
                       {item}

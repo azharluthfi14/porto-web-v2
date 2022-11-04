@@ -42,9 +42,23 @@ export default function Hero() {
           animate="animate"
           className={styles.heroContent}
         >
-          <motion.h1 variants={fadeAnimation} className={styles.heroHeading}>
-            Hello, my<motion.span className={styles.heroHeadingSpan}> name is</motion.span>
-          </motion.h1>
+          <motion.div variants={fadeAnimation} className="inline-flex items-center">
+            <h1 className={styles.heroHeading}>Hello</h1>
+            <picture className="mx-2">
+              <source
+                srcSet="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/512.webp"
+                type="image/webp"
+              />
+              <img
+                src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/512.gif"
+                alt="👋"
+                width="30"
+                height="30"
+              />
+            </picture>
+            <h1 className={styles.heroHeading}>, my name is</h1>
+          </motion.div>
+
           <motion.h2 variants={fadeAnimation} className={styles.heroSubHeading1}>
             Azhar Luthfi.
           </motion.h2>
