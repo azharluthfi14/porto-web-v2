@@ -14,7 +14,7 @@ export default function Built() {
     builtItem: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mb-10`,
     builtItemSecond: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mt-10`,
     builtItemCover: `p-1 rounded-xl mb-8 bg-gray-900 overflow-hidden dark:border-2 dark:border dark:border-violet-500`,
-    builtItemCoverSecond: `p-1 order-1 dark:border-orange-500 dark:border dark:border-2 rounded-xl bg-zinc-900 mt-8 md:mt-0 border overflow-hidden`,
+    builtItemCoverSecond: `p-1 order-1 dark:border-sky-500 dark:border dark:border-2 rounded-xl bg-zinc-900 mt-8 md:mt-0 border overflow-hidden`,
     builtItemCoverImg: `object-cover w-full hover:scale-110	ease-in-out duration-500`,
     builtItemContent: `space-y-5 flex flex-col relative justify-center`,
     builtItemHeading: `text-xl`,

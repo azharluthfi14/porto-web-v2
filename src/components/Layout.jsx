@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import SideSocmed from "./SideSocmed";
@@ -24,7 +25,7 @@ export default function LayoutPage({ children }) {
           </header>
           <SideSocmed />
           <div className="dark:bg-dark-900">
-            <main className="mx-8 md:mx-20 lg:mx-44">
+            <main className="mx-8 relative md:mx-20 lg:mx-44">
               {children}
               <Footer />
             </main>

@@ -76,7 +76,7 @@
     overflow: hidden;
     width: 20rem;
     height: 20rem;
-    background-color: #8f44fd;
+    background-color: #404041;
     border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
     animation: morph 3.75s linear infinite;
   }

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MdCloudDownload } from "react-icons/md";
-import resume from "../file/resume_muhammad_azhar_luthfi.pdf";
+import resume from "../documents/resume_muhammad_azhar_luthfi_frontend_developer.pdf";
 
 export default function Hero() {
   const styles = {
