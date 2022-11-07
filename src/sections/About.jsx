@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import avatar from "../assets/avatar2.png";
+import avatar from "../assets/avatar2.jpg";
 import { srConfig } from "../config";
 import sr from "../utils/sr";
 import LinkTag from "../components/LinkTag";
@@ -9,11 +9,11 @@ export default function About() {
   const styles = {
     aboutSection: `py-20 text-slate-800 dark:text-slate-200`,
     aboutHeading: `text-4xl bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 text-left font-bold mb-10 lg:mb-7`,
-    aboutContent: `flex flex-col lg:flex-row gap-5 md:space-x-10 justify-between`,
-    aboutText: `space-y-3 order-2 mt-5 md:mt-0 lg:order-none tracking-wide leading-7 md:leading-6`,
+    aboutContent: `flex flex-col xl:flex-row gap-5 md:space-x-10 justify-between`,
+    aboutText: `space-y-3 order-2 mt-5 md:mt-0 xl:order-none tracking-wide leading-7 md:leading-6`,
     aboutListSkills: `grid grid-cols-2 gap-3 md:gap-2`,
-    aboutImageContent: `flex blob justify-center order-1 w-full items-center`,
-    aboutImage: `object-cover h-full grayscale hover:grayscale-0`,
+    aboutImageContent: `flex mx-auto rounded-md overflow-hidden justify-center order-1 xl:order-none items-center`,
+    aboutImage: `object-contain w-7/12 md:w-8/12 lg:w-5/12 xl:w-full rounded-xl grayscale hover:grayscale-0`,
   };
 
   const skills = ["JavaScript", "HTML", "React", "Python", "Django", "CSS", "Photoshop", "Figma"];
@@ -76,9 +76,9 @@ export default function About() {
               ))}
           </ul>
         </div>
-        <figure className={styles.aboutImageContent}>
+        <div className={styles.aboutImageContent}>
           <img className={styles.aboutImage} src={avatar} draggable="false" alt="avatar" />
-        </figure>
+        </div>
       </div>
     </section>
   );

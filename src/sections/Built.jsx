@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { FaGithub, FaExternalLinkSquareAlt } from "react-icons/fa";
 import { srConfig } from "../config";
-import project1 from "../assets/filmstar.png";
-import project2 from "../assets/coinancy.png";
+import project1 from "../assets/project-one.png";
+import project2 from "../assets/project-two.png";
 import LinkTag from "../components/LinkTag";
 import sr from "../utils/sr";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
@@ -13,8 +13,6 @@ export default function Built() {
     builtContent: `text-slate-800 dark:text-slate-200`,
     builtItem: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mb-10`,
     builtItemSecond: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mt-10`,
-    builtItemCover: `p-1 rounded-xl mb-8 bg-gray-900 overflow-hidden dark:border-2 dark:border dark:border-violet-500`,
-    builtItemCoverSecond: `p-1 order-1 dark:border-sky-500 dark:border dark:border-2 rounded-xl bg-zinc-900 mt-8 md:mt-0 border overflow-hidden`,
     builtItemCoverImg: `object-cover w-full hover:scale-110	ease-in-out duration-500`,
     builtItemContent: `space-y-5 flex flex-col relative justify-center`,
     builtItemHeading: `text-xl`,
@@ -42,7 +40,7 @@ export default function Built() {
           Some Things I've Built
         </h1>
         <div className={styles.builtItem}>
-          <figure className={styles.builtItemCover}>
+          <figure>
             <img
               className={styles.builtItemCoverImg}
               draggable="false"
@@ -96,7 +94,7 @@ export default function Built() {
               </LinkTag>
             </div>
           </div>
-          <figure className={styles.builtItemCoverSecond}>
+          <figure>
             <img
               className={styles.builtItemCoverImg}
               src={project2}
