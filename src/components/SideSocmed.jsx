@@ -14,7 +14,7 @@ export default function SideSocmed() {
   const styles = {
     sideSocmed: `hidden lg:fixed bottom-0 h-screen w-40 lg:flex flex-col justify-end items-center p-6`,
     sideSocmedWrapper: `bottom-0 space-y-12 py-10 text-slate-800 dark:text-slate-200`,
-    sideSocmedLink: `hover:text-violet-500 motion-reduce:transition-none
+    sideSocmedLink: `hover:text-violet-700 motion-reduce:transition-none
      motion-reduce:hover:transform-none hover:-translate-y-1 duration-100 ease-in`,
   };
 

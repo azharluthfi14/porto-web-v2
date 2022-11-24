@@ -7,11 +7,11 @@ import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
 export default function About() {
   const styles = {
-    aboutSection: `py-20 text-slate-800 dark:text-slate-200`,
-    aboutHeading: `text-4xl bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 text-left font-bold mb-10 lg:mb-7`,
+    aboutSection: `py-20`,
+    aboutHeading: `text-5xl bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 text-left font-bold mb-10 lg:mb-7`,
     aboutContent: `flex flex-col xl:flex-row gap-5 md:space-x-10 justify-between`,
     aboutText: `space-y-3 order-2 mt-5 md:mt-0 xl:order-none tracking-wide leading-7 md:leading-6`,
-    aboutListSkills: `grid grid-cols-2 gap-3 md:gap-2`,
+    aboutListSkills: `grid grid-cols-2 gap-3 md:gap-2 list-inside`,
     aboutImageContent: `flex mx-auto rounded-md overflow-hidden justify-center order-1 xl:order-none items-center`,
     aboutImage: `object-contain w-7/12 md:w-8/12 lg:w-5/12 xl:w-full rounded-xl grayscale hover:grayscale-0`,
   };
@@ -31,18 +31,6 @@ export default function About() {
     <section id="about" ref={revealContainer} className={styles.aboutSection}>
       <div className="inline-flex space-x-2">
         <h1 className={styles.aboutHeading}>About Me</h1>
-        <picture>
-          <source
-            srcSet="https://fonts.gstatic.com/s/e/notoemoji/latest/1f60e/512.webp"
-            type="image/webp"
-          />
-          <img
-            src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f60e/512.gif"
-            alt="😎"
-            width="33"
-            height="33"
-          />
-        </picture>
       </div>
       <div className={styles.aboutContent}>
         <div className={styles.aboutText}>
@@ -67,10 +55,7 @@ export default function About() {
           <ul className={styles.aboutListSkills}>
             {skills &&
               skills.map((skill, i) => (
-                <li
-                  className="bg-gray-200 dark:bg-dark-700 py-2  px-10 text-sm text-center w-full md:w-max rounded-full"
-                  key={i}
-                >
+                <li className="before:content-['▸'] before:mr-2 before:text-violet-700" key={i}>
                   {skill}
                 </li>
               ))}

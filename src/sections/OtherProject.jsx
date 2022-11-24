@@ -11,11 +11,11 @@ export default function OtherProject() {
   const styles = {
     otherProjectSection: `py-20`,
     otherProjectTitleWrapper: `flex items-center w-full justify-center items-center mb-12`,
-    otherProjectTitle: `text-4xl font-bold bg-clip-text text-gray-800 dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300`,
-    cardProjectWrapper: `text-slate-800 gap-5 dark:text-slate-200 relative grid sm:grid-cols-2 sm:gap-3
+    otherProjectTitle: `text-5xl pb-3 font-bold bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300`,
+    cardProjectWrapper: `gap-5 relative grid sm:grid-cols-2 sm:gap-3
     xl:grid-cols-3  xl:gap-3`,
-    cardProject: `bg-white group w-full p-5 link hover:bg-gray-100 dark:bg-dark-800 dark:border-dark-700 relative
-    duration-300 ease-in-out cursor-pointer shadow-md border rounded-md`,
+    cardProject: `bg-white group w-full p-5 link hover:bg-zinc-100 dark:bg-dark-800 dark:border-dark-700 relative
+    duration-300 ease-in-out cursor-pointer rounded-md`,
     cardHeader: `flex mb-8 justify-between`,
     cardIcon: `w-5 h-5`,
     cardBodyWrapper: `space-y-5 mb-10 `,
@@ -64,18 +64,6 @@ export default function OtherProject() {
       <section ref={revealContainer} id="other-project" className={styles.otherProjectSection}>
         <div className={styles.otherProjectTitleWrapper}>
           <h1 className={styles.otherProjectTitle}>Other Projects</h1>
-          <picture className="ml-2">
-            <source
-              srcSet="https://fonts.gstatic.com/s/e/notoemoji/latest/1f525/512.webp"
-              type="image/webp"
-            />
-            <img
-              src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f525/512.gif"
-              alt="🔥"
-              width="35"
-              height="35"
-            />
-          </picture>
         </div>
         <motion.div
           initial="hidden"

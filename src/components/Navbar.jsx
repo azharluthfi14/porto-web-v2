@@ -16,9 +16,9 @@ const Navbar = () => {
   useOnClickOutside(navbarWrapperRef, () => setToggle(false));
 
   const style = {
-    navbar: `fixed top-0 w-full z-20 py-3 ${
+    navbar: `fixed border-b border-gray-200 dark:border-dark-500 top-0 w-full z-20 py-3 ${
       scrolled
-        ? "shadow-md bg-white/50 backdrop-blur-md ease-in duration-200 dark:bg-dark-800/90"
+        ? "bg-[#f6f8fd]/50 backdrop-blur-md ease-in duration-200 dark:bg-dark-800/90"
         : "ease-out duration-200 dark:bg-dark-900"
     }`,
     navbarContainer: `mx-5 md:mx-12 flex flex-wrap justify-between items-center`,
@@ -26,7 +26,7 @@ const Navbar = () => {
     navbarLogo: `w-7 h-7`,
     navbarMenu: `hidden w-full lg:flex lg:flex-row lg:items-center lg:justify-between lg:w-auto md:font-medium`,
     navbarMenuListWrapper: `flex flex-row space-x-10`,
-    navbarLink: `block select-none link py-2 text-center dark:text-white hover:dark:text-violet-700 cursor-pointer`,
+    navbarLink: `block font-semibold select-none link py-2 text-center dark:text-white hover:text-violet-700 hover:dark:text-violet-700 cursor-pointer`,
     navbarBtn: `border-l-[0.01rem] pl-5 dark:border-dark-500`,
     navbarLinkActive: `text-violet-700 dark:text-violet-500`,
     navbarLinkMobileActive: `bg-violet-500 text-white rounded-md`,

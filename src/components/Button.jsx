@@ -13,7 +13,7 @@ const Button = ({
   return (
     <button
       onClick={clickEvent}
-      className={`flex justify-center items-center py-3.5 px-7 ease-in-out duration-300 rounded-md bg-${bgColor} text-${textColor}
+      className={`flex justify-center items-center py-3.5 px-7 ease-in-out duration-300 rounded-full bg-${bgColor} text-${textColor}
        ${size === "lg" ? "text-xl" : "text-base"} hover:bg-${hoverBgColor} hover:${hoverTextColor}`}
     >
       {children}

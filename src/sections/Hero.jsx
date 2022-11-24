@@ -4,12 +4,12 @@ import resume from "../documents/resume_muhammad_azhar_luthfi_frontend_developer
 
 export default function Hero() {
   const styles = {
-    hero: `h-screen flex flex-col justify-center items-start dark:text-white`,
-    heroContent: `flex space-y-4 sm:space-y-5 flex-col justify-center text-slate-800 dark:text-slate-200`,
-    heroHeading: `text-xl text-slate-800 dark:text-slate-200`,
+    hero: `h-screen flex flex-col justify-center items-start`,
+    heroContent: `flex space-y-4 sm:space-y-5 flex-col justify-center`,
+    heroHeading: `text-xl`,
     heroHeadingSpan: `text-violet-500`,
     heroSubHeading1: `text-[45px] tracking-wide sm:text-7xl font-bold gradient-animate`,
-    heroSubHeading2: `text-5xl sm:text-6xl font-bold`,
+    heroSubHeading2: `text-5xl sm:text-6xl font-bold dark:text-white`,
     heroText: `md:text-md md:w-4/6 leading-7`,
   };
 
@@ -69,8 +69,8 @@ export default function Hero() {
             Seseorang yang tertarik pada dunia IT. Saat ini sedang menekuni dunia pemograman web.
           </motion.p>
           <motion.a
-            className="flex justify-center items-center py-3.5 px-7 rounded-md 
-            bg-dark-700 text-white group space-x-3 w-max hover:bg-opacity-70"
+            className="flex justify-center items-center py-3.5 px-7 rounded-full 
+            bg-violet-500 text-white group space-x-3 w-max hover:bg-violet-700"
             href={resume}
             variants={fadeAnimation}
             rel="noopener noreferrer"

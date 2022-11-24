@@ -100,4 +100,17 @@
       border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
     }
   }
+
+  body::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply bg-[#f6f8fd] dark:bg-dark-800;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #8b5cf6;
+    border-radius: 99px;
+  }
 }

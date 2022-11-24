@@ -9,14 +9,14 @@ import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
 export default function Built() {
   const styles = {
-    builtSection: `py-20 flex flex-col justify-center text-slate-800 dark:text-slate-200`,
-    builtContent: `text-slate-800 dark:text-slate-200`,
+    builtSection: `py-20 flex flex-col justify-center`,
+    // builtContent: `text-slate-800 dark:text-slate-200`,
     builtItem: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mb-10`,
     builtItemSecond: `grid grid-flow-row md:grid-cols-2 md:space-x-10 mt-10`,
     builtItemCoverImg: `object-cover w-full hover:scale-110	ease-in-out duration-500`,
     builtItemContent: `space-y-5 flex flex-col relative justify-center`,
-    builtItemHeading: `text-xl`,
-    builtItemSubheading: `text-3xl w-max bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 font-bold`,
+    builtItemHeading: `text-xl text-violet-700`,
+    builtItemSubheading: `text-3xl w-max bg-clip-text font-bold`,
     builtItemText: `leading-7`,
     builtItemIcon: `w-5 h-5 hover:text-violet-500 motion-reduce:transition-none
     motion-reduce:hover:transform-none hover:-translate-y-1 duration-100 ease-in`,
@@ -36,7 +36,7 @@ export default function Built() {
   return (
     <>
       <section ref={revealContainer} id="built" className={styles.builtSection}>
-        <h1 className="text-4xl bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 mb-8 md:mb-7 font-bold">
+        <h1 className="text-5xl pb-3 bg-clip-text dark:text-transparent bg-gradient-to-r from-violet-500 to-sky-300 mb-8 md:mb-7 font-bold">
           Some Things I've Built
         </h1>
         <div className={styles.builtItem}>

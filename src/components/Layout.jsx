@@ -24,7 +24,7 @@ export default function LayoutPage({ children }) {
             <Navbar />
           </header>
           <SideSocmed />
-          <div className="dark:bg-dark-900">
+          <div className="dark:bg-dark-900 bg-[#f6f8fd] text-zinc-800 dark:text-gray-300">
             <main className="mx-8 relative md:mx-20 lg:mx-44">
               {children}
               <Footer />
